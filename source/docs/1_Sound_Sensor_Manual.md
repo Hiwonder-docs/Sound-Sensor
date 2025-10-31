@@ -1,6 +1,6 @@
 # 1. Sound Sensor Manual
 
-<img class="common_img" src="../_static/media/chapter_1/section_1/media/image2.png" style="width:300px" />
+<img class="common_img" src="../_static/media/chapter_1/section_1/media/image2.png" style="width:260px" />
 
 ## 1.1 Sound Sensor Description
 
@@ -12,7 +12,7 @@ This sound Sensor is designed for external volume detection. This sensor feature
 
 The sensor is constituted of a microphone and LM358 chip. Its working principle is to convert sound vibrations at the microphone into electrical signal output. The microphone capsule can be used as a condenser electric microphone. Sound waves cause the electric film inside the microphone to vibrate, resulting in a change in capacitance and a corresponding change in tiny voltage. And the tiny voltage passes through an amplification circuit designed with the LM358 chip, then is converted to a 0–5 V signal and received by the data acquisition device via A/D conversion.
 
-<img class="common_img" src="../_static/media/chapter_1/section_1/media/image3.png" style="width:100px" />
+<img class="common_img" src="../_static/media/chapter_1/section_1/media/image3.png" style="width:120px" />
 
 ## 1.2 Notice
 
