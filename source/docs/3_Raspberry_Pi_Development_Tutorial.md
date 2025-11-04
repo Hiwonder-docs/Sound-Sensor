@@ -28,13 +28,17 @@ Install NoMachine on your computer. The software package is located under "**[Ap
 
 In this case, you need to download the library file through pip. Make sure the Raspberry Pi is connected to the network, open a terminal window, and enter the following code:
 
-"**sudo pip3 install Adafruit_ADS1x15**"
+```py
+sudo pip3 install Adafruit_ADS1x15
+```
 
 <img class="common_img" src="../_static/media/chapter_1/section_3/media/image5.png" style="width:500px" />
 
 After installing the library file successfully, open the terminal and enter the following command to switch to the directory where the program is located:
 
-"**sudo chmod a+x Sensor_Demo/**"
+```py
+sudo chmod a+x Sensor_Demo/
+```
 
 <img class="common_img" src="../_static/media/chapter_1/section_3/media/image6.png" style="width:500px" />
 
@@ -52,7 +56,9 @@ Program to display the values detected by the sound sensor in the terminal windo
 
 2. Run the program by entering:
 
-"**python3 SoundSensorDemo.py** "
+```py
+python3 SoundSensorDemo.py
+```
 
 <img class="common_img" src="../_static/media/chapter_1/section_3/media/image8.png" style="width:500px" />
 
@@ -66,7 +72,10 @@ When you speak into the microphone of the sound sensor and the sensor detects th
 
 - **Import Libraries**
 
-<img class="common_img" src="../_static/media/chapter_1/section_3/media/image10.png" style="width:300px" />
+```py
+import time
+import Adafruit_ADS1x15
+```
 
 Import required library files, including `Adafruit_ADS1x15`, the external ADC module library.
 
@@ -74,12 +83,21 @@ Since the Raspberry Pi does not have an ADC converter, you need to use an extern
 
 - **Initialization**
 
-<img class="common_img" src="../_static/media/chapter_1/section_3/media/image11.png" style="width:500px" />
+```py
+adc = Adafruit_ADS1x15.ADS1115()
+adc = Adafruit_ADS1x15.ADS1015(address = 0x48, busnum = 1)
+GAIN = 1
+```
 
 Instantiate the `adc` object and set the `adc` object to read port A1 of the ADC module.
 
 - **Main Program**
 
-<img class="common_img" src="../_static/media/chapter_1/section_3/media/image12.png" style="width:400px" />
+```py
+while True:
+    value = adc.read_adc(1,gain=GAIN)
+    print('ADC:' + str(value))	
+    time.sleep(0.2)
+```
 
 Store the data output from port A1 of the `ADC` module into value, and then print the content of value in the Raspberry Pi terminal window.
