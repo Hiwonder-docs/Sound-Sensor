@@ -14,6 +14,5 @@ Sound Sensor
    docs/1_Sound_Sensor_Manual.md
    docs/2_Arduino_Development.md
    docs/3_Raspberry_Pi_Development_Tutorial.md
-   docs/4_Arduino_IDE_Installation.md
    docs/Appendix.md
    Download <https://drive.google.com/drive/folders/1DLe7DHKoak8yU1cjDjYyAarunScVB-v5?usp=sharing>
